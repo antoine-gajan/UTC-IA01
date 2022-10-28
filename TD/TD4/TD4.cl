@@ -30,9 +30,11 @@
 
 ; Fonction qui explore en profondeur un labyrinthe
 (defun explore_prof (laby etat sortie chemin)
+    ; Ajout de l'état au chemin
+    (push etat chemin)
     ; Si etat = sortie:
     (if (equal etat sortie)
-        chemin
+        (reverse chemin)
         (progn
             (let
             ; Initialisation des variables successeurs_valides et solution
@@ -42,11 +44,6 @@
                 (while (and valides (NOT solution))
                     ; On parcourt en profondeur le labyrinthe
                     (setq solution (explore_prof laby (pop valides) sortie chemin))
-                    ; Si on a trouve la sortie du labirynthe, on ajoute l'état à solution
-
-                    (if solution
-                        (setq solution (cons etat solution))
-                    )
                 )
             ; Si on a trouve une solution
             (if solution
