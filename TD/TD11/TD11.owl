@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:comment>Une PlanteSavoureuse est une Plante qui est mangée par un Herbivore et aussi par un Carnivore</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mange">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mangePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mangePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mangePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#partieDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#partieDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Animal">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Plante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#AnimalPlante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#AnimalPlante"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Arbre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Arbre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Plante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Branche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Branche">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#partieDe"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Arbre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Carnivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Carnivore">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Animal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mange"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Animal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Feuille -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Feuille">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#partieDe"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Branche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Girafe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Girafe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Herbivore"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mange"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Feuille"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Herbivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Herbivore">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Animal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mange"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Plante"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#partieDe"/>
+                                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Plante"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Lion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Lion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Carnivore"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mange"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Herbivore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Plante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Plante"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#PlanteSavoureuse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#PlanteSavoureuse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Plante"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mangePar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Carnivore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#mangePar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Herbivore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Batavia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Batavia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Feuille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#LaPalme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#LaPalme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Léo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Léo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Lion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Olivier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Olivier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Arbre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Rose-Marie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Rose-Marie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#PlanteSavoureuse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Sophie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Sophie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Girafe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Batavia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#LaPalme"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Léo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Olivier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Rose-Marie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-2#Sophie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

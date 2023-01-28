@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Aime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Aime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#AimePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#AimePar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#ApourMetier -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#ApourMetier"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Appartient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Appartient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#ExerceDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#ExerceDans"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#PossdedePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#PossdedePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Possede -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Possede"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#PretAaider -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#PretAaider"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Cadet_de_Gascogne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Cadet_de_Gascogne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Noble"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Mondaine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Comte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Comte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Noble"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Mondaine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Mondaine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Noble -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Noble">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Personne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Personne"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Régiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Régiment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Soldat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Soldat"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Christian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Christian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Cadet_de_Gascogne"/>
+        <Aime rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Roxane"/>
+        <Appartient rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#SoldatsDuRegimentDeDeGuiche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Cyrano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Cyrano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Cadet_de_Gascogne"/>
+        <Aime rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Roxane"/>
+        <Appartient rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#SoldatsDuRegimentDeDeGuiche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#RegimentDeDeGuiche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#RegimentDeDeGuiche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Régiment"/>
+        <Appartient rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#de_Guiche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Roxane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Roxane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Mondaine"/>
+        <Aime rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Christian"/>
+        <AimePar rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Christian"/>
+        <AimePar rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Cyrano"/>
+        <AimePar rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#de_Guiche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#SoldatsDuRegimentDeDeGuiche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#SoldatsDuRegimentDeDeGuiche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Soldat"/>
+        <Appartient rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#RegimentDeDeGuiche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#de_Guiche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#de_Guiche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Comte"/>
+        <Aime rdf:resource="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Roxane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Christian"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Cyrano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#RegimentDeDeGuiche"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#Roxane"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#SoldatsDuRegimentDeDeGuiche"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#de_Guiche"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

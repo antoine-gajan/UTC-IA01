@@ -1,0 +1,17 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ont: <http://www.semanticweb.org/antoi/ontologies/2022/11/untitled-ontology-5#> 
+SELECT ?aimant ?aimé
+         WHERE { ?aimant ont:Aime ?aimé } # Personnes qui sont aimées par quelqu'un
+SELECT ?a ?b
+         WHERE { ?a ont:Aime ?b . ?b ont:Aime ?a } # Couples de personnes qui s'aiment mutuellement
+SELECT ?individuel
+         WHERE { ?individuel rdf:type ont:Cadet_de_Gascogne } # Tous les cadets de Gascogne
+SELECT ?individuel
+         WHERE { ?individuel rdf:type ont:Mondaine } # Tous les Mondaines
+SELECT ?possedé ?possesseur
+         WHERE { ?possedé ont:Appartient ?possesseur } # Couples de relations (possédés, possesseurs)
+SELECT (count(distinct ?membres) as ?nb_membres)
+         WHERE { ?membres ont:Appartient SoldatsDuRegimentDeDeGuiche } # Nombre de personnes qui appartiennent au régiment de De Guiche
